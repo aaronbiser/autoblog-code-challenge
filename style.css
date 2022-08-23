@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* border box */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* autoblog */
+
+:root {
+  --dark-grey: #2b2c2f;
+  --light-grey: #545659;
+  --red: #e02222;
+  --border: #505154;
+}
+
+body {
+  font-family: 'Roboto Condensed Light', 'sans-serif';
+  font-weight: 300;
+}
+
+/* header */
+header {
+  background-color: var(--dark-grey);
+}
+
+/* ad */
+.header__ad-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__ad-container img {
+  height: 100%;
+}
+
+/* header * {
+  border: 1px solid #fff;
+} */
+
+/* nav */
+#header__nav-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  border-top: 1px solid var(--border);
+}
+
+#header__nav-container nav {
+  flex-grow: 1;
+}
+
+#header__nav-container nav ul {
+  display: flex;
+}
+
+#header__nav-container nav ul > li {
+  flex-grow: 1;
+}
+
+#header__nav-container nav > ul > li > a {
+  display: block;
+  padding: 1rem 0.3rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#header__nav-container nav > ul > li > a:hover {
+  background-color: var(--light-grey);
+}
+
+/* nav subnav */
+#header__nav-container nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--light-grey);
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+}
+
+#header__nav-container nav ul > li > ul {
+  display: none;
+  justify-content: center;
+}
+
+#header__nav-container nav ul > li > ul.nav-menu--active {
+  display: flex;
+}
+
+#header__nav-container nav ul > li > ul > li {
+  flex-grow: 0;
+}
+
+#header__nav-container nav ul > li > ul > li > a {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+#header__nav-container nav ul > li > ul > li > a:hover {
+  background-color: var(--red);
+}
+
+/* searchbar */
+.header__search-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: var(--dark-grey);
+}
+
+.header__search-container button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgba(255,255,255,0.75);
+}
+
+.header__search-container button.search {
+  order: 0;
+}
+
+.header__search-container input {
+  order: 1;
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1rem;
+  font-family: 'Roboto Condensed Light', 'sans-serif';
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.header__search-container button.cancel {
+  order: 2;
+}
+
+/* logo */
+.header__logo-container {
+  display: flex;
+  /* flex: 0; */
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+}
+
+.header__logo-container img {
+  width: 70%;
+}
+
+.header__research-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 14rem;
+  text-align: center;
+  color: rgba(255,255,255,0.25);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  background-color: rgba(0,0,0,0.15);
+}
+
+.header__social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  text-align: center;
+  color: rgba(255,255,255,0.25);
+}
+
+#header__toggle-search-container {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  text-align: center;
+  color: rgba(255,255,255,0.25);
+  border-left: 1px solid var(--border);
+}
+
+main {
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* header search active */
+.header__nav-container--search-active .header__search-container {
+  display: flex;
+}
+
+/* #logo:before {
+  background: #e02222;
+  color: #fff;
+  content: "\e900";
+  display: block;
+  font-family: 'autoblog';
+  font-size: 34px;
+  line-height: 34px;
+  order: 1;
+  padding: 8px;
+  text-align: center;
+  width: 50px;
+} */
