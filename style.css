@@ -85,10 +85,6 @@ header {
   height: 100%;
 }
 
-/* header * {
-  border: 1px solid #fff;
-} */
-
 /* nav */
 #header__nav-container {
   position: relative;
@@ -203,7 +199,6 @@ header {
 /* logo */
 .header__logo-container {
   display: flex;
-  /* flex: 0; */
   align-items: center;
   justify-content: center;
   width: 9rem;
@@ -257,17 +252,3 @@ main {
 .header__nav-container--search-active .header__search-container {
   display: flex;
 }
-
-/* #logo:before {
-  background: #e02222;
-  color: #fff;
-  content: "\e900";
-  display: block;
-  font-family: 'autoblog';
-  font-size: 34px;
-  line-height: 34px;
-  order: 1;
-  padding: 8px;
-  text-align: center;
-  width: 50px;
-} */
